@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+	padding: 0;
+}
+
+ul, li {
+    list-style: none;
+    list-style-position:inside;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+h3, p {
+    padding: 5px 0;
+}
+
+#container {
+    background: url('../images/sky.jpg');
+}
+
+#animation {
+    padding-top: 20px;
+}
+
+#tooltips {
+    display: none;
+}
+
+.links {
+    padding: 5px 0;
+}
