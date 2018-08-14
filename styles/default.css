@@ -33,8 +33,10 @@ h3, p {
     padding: 5px 0;
 }
 
-.hasFocus {
-    fill: green;
-    stroke: yellow;
-    stroke-width: 2;
+.selected {
+    opacity: 1;
+}
+
+.notSelected {
+    opacity: 0.25;
 }
