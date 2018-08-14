@@ -11,7 +11,7 @@ var bindTooltips = function () {
 			animation: animation,
 			maxWidth: maxWidth,
 			content: tooltip,
-			theme: ['tooltipster-noir']
+			theme: ['tooltipster-noir', 'tooltipster-noir-customized']
 		});
 	});
 };
