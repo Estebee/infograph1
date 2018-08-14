@@ -2,15 +2,21 @@ var bindTooltips = function () {
 	$(".tooltip").each(function () {
 		var tooltip = $(this);
 
-		var target = tooltip.attr('data-target');
+		var targetSelector = tooltip.attr('data-target');
 		var maxWidth = tooltip.attr('data-maxWidth') || 200;
 		var animation = tooltip.attr('data-animation') || 'grow';
 
-		$(target).tooltipster({
+		var target = $(targetSelector);
+
+		target.tooltipster({
 			interactive: true,
 			animation: animation,
 			maxWidth: maxWidth,
 			content: tooltip
+		});
+
+		target.hover(function () {
+			$(this).toggleClass('hasFocus');
 		});
 	});
 };
