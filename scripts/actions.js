@@ -5,13 +5,19 @@ var bindTooltips = function () {
 		var target = tooltip.attr('data-target');
 		var maxWidth = tooltip.attr('data-maxWidth') || 200;
 		var animation = tooltip.attr('data-animation') || 'grow';
+		var label = tooltip.attr('data-ga-label');
 
 		$(target).tooltipster({
 			interactive: true,
 			animation: animation,
 			maxWidth: maxWidth,
 			content: tooltip,
-			theme: ['tooltipster-noir', 'tooltipster-noir-customized']
+			theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
+			functionBefore: function () {
+				if (window.ga) {					
+					ga('send', 'event', 'Tooltips', 'View', label);
+				}
+			}
 		});
 	});
 };
@@ -29,11 +35,11 @@ var bindToggleOnHover = function () {
 		selectable.addClass('selectable');
 
 		selectable.hover(
-			function(){
+			function () {
 				$(this).addClass('selected');
 				$('.selectable').not(this).addClass('notSelected');
-			}, 
-			function(){
+			},
+			function () {
 				$(this).removeClass('selected');
 				$('.selectable').removeClass('notSelected');
 			}
