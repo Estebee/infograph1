@@ -47,14 +47,16 @@ var bindToggleOnHover = function () {
 	});
 }
 
-var doOtherStuff = function () {
-	console.log('Sol, add your event handlers here');
+var replaceLoaderWithAnimation = function () {
+	$('#loader').fadeOut(1000, function(){
+		$('#container').fadeIn(1000);
+	});	
 }
 
 var onDomLoaded = function () {
 	bindTooltips();
 	bindToggleOnHover();
-	doOtherStuff();
+	replaceLoaderWithAnimation();
 }
 
 var loadAnimation = function () {
