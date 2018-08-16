@@ -47,14 +47,14 @@ var bindToggleOnHover = function () {
 	});
 }
 
-var replaceLoaderWithAnimation = function () {
+var fadeInAnimation = function () {
 	$('#container').fadeIn(1000);
 }
 
 var onDomLoaded = function () {
 	bindTooltips();
 	bindToggleOnHover();
-	replaceLoaderWithAnimation();
+	fadeInAnimation();
 }
 
 var loadAnimation = function () {
