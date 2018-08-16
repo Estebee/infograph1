@@ -48,7 +48,7 @@ var bindToggleOnHover = function () {
 }
 
 var replaceLoaderWithAnimation = function () {
-	$('#loader').fadeOut(1000, function(){
+	$('#loader').fadeOut(2000, function(){
 		$('#container').fadeIn(1000);
 	});	
 }
